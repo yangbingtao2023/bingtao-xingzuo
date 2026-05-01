@@ -1,0 +1,9 @@
+{
+  "name": "getDailyFortune",
+  "version": "1.0.0",
+  "description": "获取当日 12 星座运势",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

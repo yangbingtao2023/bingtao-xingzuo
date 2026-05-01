@@ -1,0 +1,81 @@
+<!-- 运势详情页 -->
+<view class="page">
+  <!-- 顶部 -->
+  <view class="top-bar">
+    <text class="back-icon" bindtap="onBack">‹</text>
+    <text class="sign-title">{{signIcon}} {{signName}}今日运势</text>
+  </view>
+
+  <!-- 加载 -->
+  <view wx:if="{{loading}}" class="loading-wrap">
+    <text class="loading-spinner">⏳</text>
+    <text class="loading-text">获取运势中...</text>
+  </view>
+
+  <!-- 错误 -->
+  <view wx:elif="{{error}}" class="error-state">
+    <text class="error-icon">😵</text>
+    <text class="error-text">{{errorMsg}}</text>
+  </view>
+
+  <!-- 运势内容 -->
+  <view wx:else class="fortune-content">
+    <!-- 幸运元素 -->
+    <view class="lucky-section">
+      <view class="rating-row">
+        <text class="rating-label">综合运势</text>
+        <view class="rating-stars">
+          <text wx:for="{{fortune.rating}}" wx:key="*this" class="star big">★</text>
+          <text wx:for="{{5 - fortune.rating}}" wx:key="*this" class="star big empty">★</text>
+        </view>
+      </view>
+
+      <view class="lucky-elements">
+        <view class="lucky-item">
+          <text class="lucky-label">幸运数字</text>
+          <text class="lucky-value number">{{fortune.lucky_number || '-'}}</text>
+        </view>
+        <view class="lucky-item">
+          <text class="lucky-label">幸运颜色</text>
+          <text class="lucky-value">{{fortune.lucky_color || '-'}}</text>
+        </view>
+        <view class="lucky-item">
+          <text class="lucky-label">星座属性</text>
+          <text class="lucky-value">{{fortune.element || '-'}}</text>
+        </view>
+      </view>
+
+      <!-- 标签 -->
+      <view wx:if="{{fortune.tags && fortune.tags.length}}" class="tags-row">
+        <text wx:for="{{fortune.tags}}" wx:key="*this" class="tag-item">{{item}}</text>
+      </view>
+    </view>
+
+    <!-- 运势正文 -->
+    <view class="content-card">
+      <text class="content-title">今日运势</text>
+      <text class="content-body">{{fortune.content || '暂无详细运势内容'}}</text>
+    </view>
+
+    <!-- 星座信息 -->
+    <view class="info-card" wx:if="{{fortune.date_range || fortune.planet}}">
+      <text class="content-title">星座信息</text>
+      <view class="info-row">
+        <text class="info-label">日期范围</text>
+        <text class="info-value">{{fortune.date_range || '-'}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">守护星</text>
+        <text class="info-value">{{fortune.planet || '-'}}</text>
+      </view>
+    </view>
+
+    <!-- 广告 -->
+    <view class="ad-container">
+      <!-- <ad unit-id="adunit-xxxxxxxxxxxx" ad-type="banner"></ad> -->
+      <text class="ad-placeholder">广告位</text>
+    </view>
+  </view>
+
+  <view class="safe-area-bottom" style="height: 24rpx;"></view>
+</view>

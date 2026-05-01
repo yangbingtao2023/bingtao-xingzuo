@@ -1,0 +1,11 @@
+<!-- 单个星座卡片（可复用） -->
+<view class="card {{hasData ? '' : 'no-data'}}" bindtap="onTap">
+  <text class="icon">{{icon}}</text>
+  <text class="name">{{name}}</text>
+  <text class="dates">{{dateRange}}</text>
+  <view wx:if="{{rating > 0}}" class="stars">
+    <text wx:for="{{rating}}" wx:key="*this" class="star">★</text>
+    <text wx:for="{{5 - rating}}" wx:key="*this" class="star empty">★</text>
+  </view>
+  <text wx:else class="hint">-</text>
+</view>

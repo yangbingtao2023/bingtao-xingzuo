@@ -1,0 +1,46 @@
+/* 全局样式 */
+page {
+  --primary: #6B5CE7;
+  --primary-light: #8B7FE8;
+  --primary-dark: #5A4BD1;
+  --bg: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --text: #333333;
+  --text-secondary: #999999;
+  --text-light: #CCCCCC;
+  --success: #52C41A;
+  --warning: #FAAD14;
+  --danger: #FF4D4F;
+  --border: #EEEEEE;
+
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 28rpx;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 安全区域适配 */
+.safe-area-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 卡片样式 */
+.card {
+  background: var(--card-bg);
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+/* 广告容器 */
+.ad-container {
+  margin: 24rpx;
+  padding: 16rpx;
+  background: var(--card-bg);
+  border-radius: 16rpx;
+  text-align: center;
+}

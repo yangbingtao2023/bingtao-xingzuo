@@ -1,0 +1,49 @@
+<!-- 运势内容展示 -->
+<view class="fortune-wrap">
+  <!-- 评分 -->
+  <view class="rating-row">
+    <text class="label">综合运势</text>
+    <view class="stars">
+      <text wx:for="{{rating}}" wx:key="*this" class="star">★</text>
+      <text wx:for="{{5 - rating}}" wx:key="*this" class="star empty">★</text>
+    </view>
+  </view>
+
+  <!-- 幸运元素 -->
+  <view class="lucky-row">
+    <view class="lucky-col">
+      <text class="lucky-label">幸运数字</text>
+      <text class="lucky-val number">{{luckyNumber || '-'}}</text>
+    </view>
+    <view class="lucky-col">
+      <text class="lucky-label">幸运颜色</text>
+      <text class="lucky-val">{{luckyColor || '-'}}</text>
+    </view>
+    <view class="lucky-col">
+      <text class="lucky-label">属性</text>
+      <text class="lucky-val">{{element || '-'}}</text>
+    </view>
+  </view>
+
+  <!-- 标签 -->
+  <view wx:if="{{tags.length}}" class="tags">
+    <text wx:for="{{tags}}" wx:key="*this" class="tag">{{item}}</text>
+  </view>
+
+  <!-- 正文 -->
+  <view class="content">
+    <text class="content-text">{{content}}</text>
+  </view>
+
+  <!-- 星座信息 -->
+  <view wx:if="{{dateRange || planet}}" class="meta">
+    <view class="meta-row" wx:if="{{dateRange}}">
+      <text class="meta-label">日期</text>
+      <text class="meta-val">{{dateRange}}</text>
+    </view>
+    <view class="meta-row" wx:if="{{planet}}">
+      <text class="meta-label">守护星</text>
+      <text class="meta-val">{{planet}}</text>
+    </view>
+  </view>
+</view>

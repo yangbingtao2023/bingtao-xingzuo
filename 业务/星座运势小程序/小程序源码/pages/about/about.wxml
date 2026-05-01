@@ -1,0 +1,42 @@
+<!-- 关于页 -->
+<view class="page">
+  <view class="header">
+    <text class="app-icon">🔮</text>
+    <text class="app-name">星座运势</text>
+    <text class="app-version">v{{appVersion}}</text>
+  </view>
+
+  <view class="section">
+    <text class="section-title">功能说明</text>
+    <view class="section-content">
+      <text class="desc-text">每日更新 12 星座运势，包含综合运势评分、幸运数字、幸运颜色及运势详解。</text>
+      <text class="desc-text">点击首页对应的星座卡片即可查看。</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">数据来源</text>
+    <view class="section-content">
+      <text class="desc-text">运势数据来自多个国际星座平台及国内 API 服务商，每日自动更新。</text>
+      <text class="desc-text">运势内容仅供娱乐参考，请勿过度依赖。</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">更新日志</text>
+    <view class="section-content">
+      <view class="log-item">
+        <text class="log-version">v1.0.0</text>
+        <text class="log-date">2026-05-01</text>
+        <text class="log-desc">首个版本发布，支持 12 星座每日运势查询</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">丙涛 · 超级个体出品</text>
+    <text class="footer-text">🌟 三省吾身 · 知行合一 🌟</text>
+  </view>
+
+  <view class="safe-area-bottom" style="height: 24rpx;"></view>
+</view>

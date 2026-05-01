@@ -1,0 +1,14 @@
+[project]
+name = "xiangyu-horoscope-pipeline"
+version = "0.1.0"
+description = "星座运势数据处理管道：抓取 → 标准化 → 发布到微信云开发"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.28",
+    "feedparser>=6.0",
+]
+
+[project.scripts]
+fetch-horoscope = "fetch_daily_horoscope:main"
+transform-horoscope = "transform_horoscope:main"
+publish-horoscope = "publish_to_cloudbase:main"

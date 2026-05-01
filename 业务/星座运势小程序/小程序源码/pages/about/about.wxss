@@ -1,0 +1,98 @@
+/* 关于页 */
+.page {
+  min-height: 100vh;
+  background: #F5F5F5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64rpx 0 48rpx;
+  background: linear-gradient(180deg, #6B5CE7, #8B7FE8);
+}
+
+.app-icon {
+  font-size: 80rpx;
+  margin-bottom: 16rpx;
+}
+
+.app-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.app-version {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8rpx;
+}
+
+.section {
+  background: #FFFFFF;
+  margin: 24rpx;
+  border-radius: 16rpx;
+  padding: 32rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16rpx;
+  display: block;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.desc-text {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+.log-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-version {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #6B5CE7;
+}
+
+.log-date {
+  font-size: 22rpx;
+  color: #BBB;
+  margin: 4rpx 0;
+}
+
+.log-desc {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48rpx 0 32rpx;
+}
+
+.footer-text {
+  font-size: 24rpx;
+  color: #CCC;
+  line-height: 1.8;
+}
