@@ -26,7 +26,8 @@ RSS_FEEDS: dict[str, str] = {
 TIANAPI_KEY = os.environ.get("TIANAPI_KEY", "")
 TIANAPI_BASE = "https://apis.tianapi.com/star/index"
 
-OUTPUT_DIR = Path("/Users/mac/Documents/我的知识库/生活/星座运势")
+KB_ROOT = Path(os.environ.get("KB_ROOT", "/Users/mac/Documents/我的知识库"))
+OUTPUT_DIR = KB_ROOT / "生活/星座运势"
 
 # 星座名称映射（英文 → 中文 + 简称）
 SIGN_MAP: dict[str, dict[str, str]] = {

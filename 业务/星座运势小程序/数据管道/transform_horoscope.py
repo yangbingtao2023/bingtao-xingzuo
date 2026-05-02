@@ -5,6 +5,7 @@
 """
 
 import json
+import os
 import random
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
@@ -13,10 +14,11 @@ from typing import Any
 
 BEIJING_TZ = timezone(timedelta(hours=8))
 
-FETCHER_OUTPUT_DIR = Path("/Users/mac/Documents/我的知识库/生活/星座运势")
+KB_ROOT = Path(os.environ.get("KB_ROOT", "/Users/mac/Documents/我的知识库"))
+FETCHER_OUTPUT_DIR = KB_ROOT / "生活/星座运势"
 FETCHER_LATEST = FETCHER_OUTPUT_DIR / "latest.json"
 
-MP_OUTPUT_DIR = Path("/Users/mac/Documents/我的知识库/业务/星座运势小程序/数据管道/output")
+MP_OUTPUT_DIR = KB_ROOT / "业务/星座运势小程序/数据管道/output"
 MP_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 SIGN_META: dict[str, dict[str, str]] = {

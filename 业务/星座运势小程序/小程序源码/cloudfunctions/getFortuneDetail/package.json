@@ -1,9 +1,0 @@
-{
-  "name": "getFortuneDetail",
-  "version": "1.0.0",
-  "description": "获取单个星座运势详情",
-  "main": "index.js",
-  "dependencies": {
-    "wx-server-sdk": "latest"
-  }
-}
